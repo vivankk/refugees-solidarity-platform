@@ -1,0 +1,14 @@
+<div class="homepage-wrapper">
+    <div class="homepage-container">
+        <mat-card class="blog-card" *ngFor="let blog of allBlogs">
+            <mat-card-header>
+                <mat-card-title [routerLink]="['/blog',blog.id]">{{blog.title}}</mat-card-title>
+                <mat-card-subtitle>{{blog.created_at|date}}</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image [routerLink]="['/blog',blog.id]" [src]="blog.feature_image" alt="Photo of a Shiba Inu">
+              <mat-card-content>
+                <p [innerHTML]="blog.content|slice:0:300"></p>
+              </mat-card-content>
+        </mat-card>
+    </div>
+</div>
