@@ -14,6 +14,6 @@ def log_in():
     if user:
         if check_password_hash(user.password, request_data["password"]):
             jwt_token = create_access_token(identity=user.email)
-            return jsonify({"token": jwt_token})
+            return jsonify({"token": jwt_token, "user_id": user.id})
     else:
         return "Invalid email or password", 400
