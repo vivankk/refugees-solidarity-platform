@@ -1,6 +1,16 @@
 # refugees-solidarity-platform
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.6.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.6 and Python-Flask as the backend for the api
+
+The project is based of the tutorial shown by Vivek Bisht (see the links below)
+https://blog.soshace.com/how-to-create-a-personal-blogging-website-part-1/
+https://blog.soshace.com/how-to-create-a-personal-blogging-website-part-2/
+
+and the his github repository
+
+https://github.com/Bviveksingh/Personal-blog-flask
+https://github.com/Bviveksingh/angular-frontend
+
 
 ## Development server
 
