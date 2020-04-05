@@ -57,7 +57,7 @@ export class RegisterComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe((confirm: boolean) => {
       if (confirm) {
-        this.submit_blog();
+        this.submit_form();
       }
     });
 
@@ -96,7 +96,7 @@ export class RegisterComponent implements OnInit {
       this.email = '';
       this.password = '';
       this.skills = [];
-      this.userDescription = [];
+      this.userDescription = '';
     });
   }
 

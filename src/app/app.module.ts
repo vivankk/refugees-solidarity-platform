@@ -22,6 +22,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RegisterComponent } from './register/register.component';
 import {MatListModule} from '@angular/material/list';
+import { AccomodationComponent } from './accomodation/accomodation.component';
+import { MarketComponent } from './market/market.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import {MatListModule} from '@angular/material/list';
     AlertDialogBodyComponent,
     DialogBodyComponent,
     TagComponent,
-    RegisterComponent
+    RegisterComponent,
+    AccomodationComponent,
+    MarketComponent
   ],
     imports: [
         BrowserModule,
