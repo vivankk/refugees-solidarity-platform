@@ -1,0 +1,47 @@
+<div class="add-user-container">
+    <div class="add-user-main-form">
+        <div class="add-user-name">
+            <mat-form-field>
+                <input matInput type="text" [(ngModel)]="firstName" placeholder="First Name">
+            </mat-form-field>
+          <mat-form-field>
+                <input matInput type="text" [(ngModel)]="lastName" placeholder="Last Name">
+          </mat-form-field>
+          <mat-form-field>
+                <input matInput type="text" [(ngModel)]="email" placeholder="Email">
+          </mat-form-field>
+          <mat-form-field>
+                <input matInput type="text" [(ngModel)]="phone" placeholder="Phone Number">
+          </mat-form-field>
+        </div>
+        <div class="add-blog-input-content">
+          <h3>Describe yourself</h3>
+          <textarea matInput [(ngModel)]="userDescription" height="auto" placeholder="I am awesome..."></textarea>
+        </div>
+    </div>
+    <div class="add-user-additional-form">
+        <div class="add-user-additional-image">
+            <h3>Photo</h3>
+            <input #imageInput
+                type="file"
+                accept="image/*"
+                hidden
+                (change)="processFile(imageInput)">
+            <img class="preview-image" [src]="previewImage" *ngIf="previewImage">
+            <button mat-raised-button color="primary" (click)="imageInput.click()" >
+                {{previewImage ? 'Change Image': 'Upload Image'}}
+            </button>
+        </div>
+        <div class="add-blog-additional-skills">
+            <h3>Skills</h3>
+            <mat-selection-list #skills>
+              <mat-list-option *ngFor="let skill of typesOfSkills">
+                {{skill}}
+              </mat-list-option>
+            </mat-selection-list>
+        </div>
+        <div class="add-user-additional-actions">
+            <button mat-raised-button id="create-action" (click)="open_dialog('Are you sure you want to register?')">Register</button>
+        </div>
+    </div>
+</div>
