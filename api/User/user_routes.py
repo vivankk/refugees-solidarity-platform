@@ -25,7 +25,6 @@ def get_single_user(user_id):
 
 
 @users.route("/add_user", methods=["POST"])
-@jwt_required
 def add_user():
     data = request.get_json()
 
