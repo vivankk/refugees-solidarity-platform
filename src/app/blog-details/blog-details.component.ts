@@ -36,11 +36,11 @@ export class BlogDetailsComponent implements OnInit {
 
   get_blog_details() {
     this.blog_service.get_single_blog(this.blog_id).subscribe((response: any) => {
-      this.blog_props.title = response.single_blog.title;
-      this.blog_props.content = response.single_blog.content;
-      this.blog_props.feature_image = response.single_blog.feature_image;
-      this.blog_props.created_at = response.single_blog.created_at;
-      response.single_blog.tags.foreach((element: any) => {
+      this.blog_props.title = response.single_message.title;
+      this.blog_props.content = response.single_message.content;
+      this.blog_props.feature_image = response.single_message.feature_image;
+      this.blog_props.created_at = response.single_message.created_at;
+      response.single_message.tags.foreach((element: any) => {
         this.blog_props.tags.push(element);
       });
     });

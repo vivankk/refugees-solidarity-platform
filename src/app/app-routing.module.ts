@@ -8,6 +8,7 @@ import { AllBlogsComponent } from './admin/all-blogs/all-blogs.component';
 import { AddBlogComponent } from './admin/add-blog/add-blog.component';
 import { UpdateBlogComponent } from './admin/update-blog/update-blog.component';
 import { LoginComponent } from './login/login.component';
+import {RegisterComponent} from './register/register.component';
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},
@@ -20,7 +21,8 @@ const routes: Routes = [
       {path: 'update-blog/:id', component: UpdateBlogComponent}
     ]
 },
-  {path: 'login', component: LoginComponent}
+  {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent}
 ];
 
 

@@ -1,4 +1,6 @@
-<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+<nav class="navbar navbar-expand-sm bg-light">
+  <div class="container-fluid">
+
   <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">
     <img
     width="160"
@@ -8,13 +10,39 @@
   </a>
   <h1>The Swiss Refugees' Solidariy Platform</h1>
   <ul class="navbar-nav px-3">
-    <li class="nav-item text-nowrap">
+    <li class="nav-item">
       <a routerLink="/" class="nav-link" routerLinkActive="active">
         <i class="fas fa-home"></i>
               Home
       </a>
     </li>
+    <li class="nav-item">
+      <a routerLink="login/" class="nav-link" routerLinkActive="active">
+        <i class="fas fa-home"></i>
+              Login
+      </a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="register" class="nav-link" routerLinkActive="active">
+        <i class="fas fa-home"></i>
+              Register
+      </a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/" class="nav-link" routerLinkActive="active">
+        <i class="fas fa-home"></i>
+              Accomodation
+      </a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/" class="nav-link" routerLinkActive="active">
+        <i class="fas fa-home"></i>
+              Market
+      </a>
+    </li>
   </ul>
+  </div>
 </nav>
+
 
 <router-outlet></router-outlet>

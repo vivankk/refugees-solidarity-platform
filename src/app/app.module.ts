@@ -20,6 +20,8 @@ import {RichTextEditorAllModule} from '@syncfusion/ej2-angular-richtexteditor';
 import {JwtModule} from '@auth0/angular-jwt';
 import {HttpClientModule} from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { RegisterComponent } from './register/register.component';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -33,27 +35,30 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BlogDetailsComponent,
     AlertDialogBodyComponent,
     DialogBodyComponent,
-    TagComponent
+    TagComponent,
+    RegisterComponent
   ],
-  imports: [
-    BrowserModule,
-    MaterialModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    RichTextEditorAllModule,
-    FontAwesomeModule,
-    JwtModule.forRoot({
-     config: {
-        tokenGetter: function  tokenGetter() {
-            return localStorage.getItem('auth_token'); },
-        whitelistedDomains: ['localhost:5000'],
-        blacklistedRoutes: ['http://localhost:5000/login']
-     }
-})
-  ],
+    imports: [
+        BrowserModule,
+        MaterialModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        RichTextEditorAllModule,
+        FontAwesomeModule,
+        JwtModule.forRoot({
+            config: {
+                tokenGetter: function tokenGetter() {
+                    return localStorage.getItem('auth_token');
+                },
+                whitelistedDomains: ['localhost:5000'],
+                blacklistedRoutes: ['http://localhost:5000/login']
+            }
+        }),
+        MatListModule
+    ],
   providers: [],
   entryComponents: [DialogBodyComponent, AlertDialogBodyComponent],
   bootstrap: [AppComponent]

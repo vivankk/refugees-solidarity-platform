@@ -5,11 +5,13 @@ import {Injectable} from '@angular/core';
   providedIn: 'root',
 })
 export class BlogService {
-  private add_blog_url = 'http://localhost:5000/add_blog';
-  private get_all_blogs_url = 'http://localhost:5000/blogs';
-  private delete_blog_url = 'http://localhost:5000/delete_blog/';
-  private get_single_blog_url = 'http://localhost:5000/blog/';
-  private update_blog_url = 'http://localhost:5000/update_blog/';
+  private base_url = 'http://localhost:5000/'
+  private add_blog_url = this.base_url + 'add_blog';
+  private get_all_blogs_url = this.base_url + 'messages';
+  private delete_blog_url = this.base_url + 'delete_message/';
+  private get_single_blog_url = this.base_url + 'message/';
+  private update_blog_url = this.base_url + 'update_blog/';
+
   constructor(private http: HttpClient) { }
 
   add_blog(blogProps: Object) {
@@ -24,12 +26,12 @@ export class BlogService {
       return this.http.delete(this.delete_blog_url + id);
   }
 
-  get_single_blog(blog_id: string) {
-    return this.http.get(this.get_single_blog_url + blog_id);
+  get_single_blog(blogId: string) {
+    return this.http.get(this.get_single_blog_url + blogId);
   }
 
-  update_blog(blog_props: Object, blog_id: string) {
-    return this.http.put(this.update_blog_url + blog_id, blog_props);
+  update_blog(blogProbs: Object, blogId: string) {
+    return this.http.put(this.update_blog_url + blogId, blogProbs);
   }
 }
 

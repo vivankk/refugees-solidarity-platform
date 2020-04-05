@@ -18,13 +18,15 @@ export class HomepageComponent implements OnInit {
   constructor(private blogService: BlogService) { }
 
   ngOnInit() {
-    //this.load_all_blogs();
+    this.load_all_blogs();
   }
 
   load_all_blogs() {
     this.blogService.get_all_blogs().subscribe((response: any) => {
-      response.all_blogs.forEach((element: any) => {
+      console.log(response);
+      response.all_messages.forEach((element: any) => {
         this.allBlogs.push(element);
+        console.log(element.name);
       });
     });
   }
