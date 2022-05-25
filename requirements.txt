@@ -14,7 +14,7 @@ lazy-object-proxy==1.4.3
 MarkupSafe==1.1.1
 mccabe==0.6.1
 pathspec==0.7.0
-PyJWT==1.7.1
+PyJWT==2.4.0
 pylint==2.4.4
 pylint-flask==0.6
 pylint-plugin-utils==0.6
